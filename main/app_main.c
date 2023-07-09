@@ -29,7 +29,7 @@
 #include "esp_system.h"
 #include "nvs_flash.h"
 
-#ifdef CONFIG_AT_WIFI_COMMAND_SUPPORT
+#ifdef CONFIG_AT_WIFI_COMMAND_SUPPORT//Alan
 #include "esp_event.h"
 #include "esp_wifi.h"
 #endif
