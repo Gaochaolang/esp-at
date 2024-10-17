@@ -401,6 +401,10 @@ def setup_env_variables():
     print('IDF_PYTHON_ENV_PATH is {}'.format(os.environ.get('IDF_PYTHON_ENV_PATH')))
     print('sys.platform is {}'.format(sys.platform))
 
+    # set AT_CUSTOM_COMPONENTS
+    at_custom_cmd_path=os.path.join(os.getcwd(), 'examples/at_custom_cmd')
+    os.environ['AT_CUSTOM_COMPONENTS']=at_custom_cmd_path
+
     export_str = ''
     if sys.platform != 'linux2':
         cmd = '{} {} export --format=key-value'.format(sys.executable, os.path.join('esp-idf', 'tools', 'idf_tools.py'))
